@@ -1246,7 +1246,8 @@ E com base nesses dados foi pedido que:
 
 ```elixir
 defmodule Planet do
-  defstruct [:nome, :superficie, :volume, :massa, :temp_media, :distancia_sol]
+  @enforce_keys [:nome, :superficie, :volume, :massa, :temp_media, :distancia_sol]
+  defstruct nome: "", superficie: 0, volume: 0, massa: 0, temp_media: 0, distancia_sol: 0
 end
 ```
 
